@@ -17,6 +17,7 @@ export const useCompanies = () => {
   useEffect(() => {
     if (user.id) {
       setLoading(true);
+
       FindCompanies({ headers })
         .then((companies) => {
           dispatch(setCompanies(companies));
@@ -33,7 +34,7 @@ export const useCompanies = () => {
           });
         });
     }
-  }, [user.id]);
+  }, [user]);
 
   return { companies, loading, error };
 };

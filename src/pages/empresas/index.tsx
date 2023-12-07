@@ -1,5 +1,6 @@
-import { Toolbar } from "@/components/toolbar";
+import { Page } from "@/components/page";
 import { useCompanies } from "@/hooks/company";
+import { CompaniesTable } from "./_components";
 
 const CompanyHome = () => {
   const { companies, loading } = useCompanies();
@@ -9,10 +10,11 @@ const CompanyHome = () => {
   console.log(companies);
 
   return (
-    <div>
-      <Toolbar />
-      <h1>Company Home</h1>
-    </div>
+    <Page title="Empresas">
+      <div className=" m-5">
+        <CompaniesTable />
+      </div>
+    </Page>
   );
 };
 
