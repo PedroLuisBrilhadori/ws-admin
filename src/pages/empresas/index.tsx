@@ -18,7 +18,7 @@ const CompanyHome = () => {
 
   return (
     <Page back="/" title="Empresas" action={<CreateCompany />}>
-      <div className=" m-5">
+      <div>
         <CompaniesTable />
       </div>
     </Page>

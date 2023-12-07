@@ -7,3 +7,8 @@ export type User = {
   company?: Company;
   access_token?: string;
 };
+
+export type CreateUser = {
+  name: string;
+  email: string;
+};

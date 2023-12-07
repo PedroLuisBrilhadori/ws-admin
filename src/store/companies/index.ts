@@ -11,10 +11,14 @@ const slice = createSlice({
     setCompanies(state, action) {
       return action.payload;
     },
+
+    addCompany(state, action) {
+      return state.concat(action.payload);
+    },
   },
 });
 
-export const { setCompanies } = slice.actions;
+export const { setCompanies, addCompany } = slice.actions;
 
 export const selectCompanies = (state: RootState) => {
   return state.companies;

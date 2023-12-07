@@ -24,7 +24,7 @@ export const Page = ({ title, children, back, action }: PageProps) => {
 
       {title && <PageTitle />}
 
-      {children}
+      <div className="m-5">{children}</div>
     </div>
   );
 };
