@@ -1,16 +1,23 @@
 import { Page } from "@/components/page";
 import { useCompanies } from "@/hooks/company";
 import { CompaniesTable } from "./_components";
+import { Button } from "@/components/ui/button";
 
 const CompanyHome = () => {
   const { companies, loading } = useCompanies();
 
   if (loading) return <div>Loading...</div>;
 
-  console.log(companies);
+  const CreateCompany = () => {
+    return (
+      <a href="/empresas/criar">
+        <Button>Criar empresa</Button>
+      </a>
+    );
+  };
 
   return (
-    <Page title="Empresas">
+    <Page back="/" title="Empresas" action={<CreateCompany />}>
       <div className=" m-5">
         <CompaniesTable />
       </div>
