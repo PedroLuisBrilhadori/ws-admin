@@ -1,3 +1,4 @@
+import { Toolbar } from "@/components/toolbar";
 import { useCompanies } from "@/hooks/company";
 
 const CompanyHome = () => {
@@ -9,6 +10,7 @@ const CompanyHome = () => {
 
   return (
     <div>
+      <Toolbar />
       <h1>Company Home</h1>
     </div>
   );
